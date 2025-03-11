@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsPsych Conjunctive CPT Experiment</title>
+    <!-- Link to your CSS if applicable -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Experiment code will go here -->
+    <script src="jsPsych.js"></script>
+    <!-- Add any necessary jsPsych plugins -->
+    <script src="plugin1.js"></script>
+    <script src="plugin2.js"></script>
+
+    <script>
+        // Initialize and start the experiment here (example jsPsych code)
+        var timeline = [];
+        // Example experiment logic (customize with your actual experiment code)
+        var welcome = {
+            type: "html-keyboard-response",
+            stimulus: "Welcome to the experiment! Press any key to begin."
+        };
+        timeline.push(welcome);
+
+        jsPsych.init({
+            timeline: timeline,
+            on_finish: function() {
+                alert('Experiment finished!');
+            }
+        });
+    </script>
+</body>
+</html>
